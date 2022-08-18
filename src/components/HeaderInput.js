@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import cityImg from "../images/town-svgrepo-com.svg";
 
-export default function HeaderInput({ props, getDataFromHeader, getWeather }) {
+export default function HeaderInput({ getDataFromHeader, getWeather }) {
   const [isOpen, setIsOpen] = useState(false);
   // const [currentCity, setCurrentCity] = useState("")
 

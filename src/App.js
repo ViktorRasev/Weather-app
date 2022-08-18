@@ -7,7 +7,7 @@ import OtherInfo from "./components/Other-info";
 
 function App() {
   // Weather api
-  const apiKey = "eb0a59f778bda6331dedef65a7d76f33";
+  const apiKey = "eeb956c6b612ce40f2d1f58dc80386fb";
   const [weatherData, setWeatherData] = useState();
   const [city, setCity] = useState("");
 
@@ -18,8 +18,8 @@ function App() {
   }
   const getWeather = (e) => {
     if (e.key === "Enter") {
-      fetch(
-        `http://api.weatherstack.com/current?access_key=${apiKey}&query=${city}`
+      fetch( // Netlify blokuje http API => musi byt https
+      `https:api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
       )
         .then((res) => res.json())
         .then((data) => setWeatherData([data]));
@@ -54,12 +54,10 @@ function App() {
         headerComponent
       ) : (
         <HeaderInput
-          // cityValue={city}
           getDataFromHeader={getDataFromHeader}
           getWeather={getWeather}
         />
       )}
-      {/* {headerComponent} */}
       <Forecast />
       {otherInfoComponent}
     </div>

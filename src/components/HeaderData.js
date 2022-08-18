@@ -36,11 +36,11 @@ export default function HeaderData({
       </button>
 
       <div className="main-info">
-        <h2 className="city">{headerData.location.name}</h2>
-        <p className="current-day">{headerData.location.localtime}</p>  
-        <h1 className="degrees">{headerData.current.temperature}°c</h1>
-        <p className="temp-min-max">15°/30°{headerData.header}</p>
-        <p className="temp-feel">Feels like {headerData.current.feelslike}°c</p>
+        <h2 className="city">{headerData.name}</h2>
+        {/* <p className="current-day">{headerData.location.localtime}</p>   */}
+        <h1 className="degrees">{Math.round(headerData.main.temp)}°c</h1>
+        <p className="temp-min-max">{`${Math.round(headerData.main.temp_min)}°/${Math.round(headerData.main.temp_max)}°`}</p>
+        <p className="temp-feel">Feels like {Math.round(headerData.main.feels_like)}°c</p>
       </div>
     </div>
   );
