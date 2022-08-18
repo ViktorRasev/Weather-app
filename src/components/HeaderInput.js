@@ -22,11 +22,11 @@ export default function HeaderInput({ getDataFromHeader, getWeather }) {
             type="text"
           />
         )}
-      </div>
 
-      <button className="city-btn" onClick={toogleCityInput}>
-        <img src={cityImg} className="city-img" alt="city" />
-      </button>
+        <button className="city-btn" onClick={toogleCityInput}>
+          <img src={cityImg} className="city-img" alt="city" />
+        </button>
+      </div>
     </div>
   );
 }

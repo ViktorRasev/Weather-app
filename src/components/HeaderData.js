@@ -29,12 +29,12 @@ export default function HeaderData({
             type="text"
           />
         )}
-      </div>
+     
 
       <button className="city-btn" onClick={toogleCityInput}>
         <img src={cityImg} className="city-img" alt="city" />
       </button>
-
+      </div>
       <div className="main-info">
         <h2 className="city">{headerData.name}</h2>
         {/* <p className="current-day">{headerData.location.localtime}</p>   */}
