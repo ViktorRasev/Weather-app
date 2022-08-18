@@ -18,7 +18,7 @@ function App() {
   }
   const getWeather = (e) => {
     if (e.key === "Enter") {
-      fetch( // Netlify blokuje http API => musi byt https
+      fetch( 
       `https:api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
       )
         .then((res) => res.json())
